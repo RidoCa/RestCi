@@ -160,8 +160,8 @@ class Test_api extends CI_Controller {
 						$output .= '
 						<tr>
 							<td>'.$row->jenis_emas.'</td>
-							<td>'.$row->tanggal_penjualan.'</td>
 							<td>'.$row->harga_gram.'</td>
+							<td>'.date('d F Y', strtotime($row->tanggal_penjualan)).'</td>
 							<td><butto type="button" name="edit" class="btn btn-warning btn-xs edit" id="'.$row->id_penjualan.'">Edit</button></td>
 							<td><button type="button" name="delete" class="btn btn-danger btn-xs delete" id="'.$row->id_penjualan.'">Delete</button></td>
 						</tr>
